@@ -87,7 +87,7 @@ namespace Reign.Plugin
 				userAgent = "";
 				gravity = desc.Editor_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.Editor_AdScale;
-				#elif UNITY_BLACKBERRY
+#elif UNITY_BLACKBERRY
 				refreshRate = desc.BB10_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.BB10_MillennialMediaAdvertising_APID;
 
@@ -100,53 +100,53 @@ namespace Reign.Plugin
 
 				gravity = desc.BB10_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.BB10_AdScale;
-				#elif UNITY_WP8
+#elif UNITY_WP8
 				refreshRate = desc.WP8_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.WP8_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.WP8_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.WP8_AdScale;
-				#elif UNITY_METRO
+#elif UNITY_METRO
 				refreshRate = desc.WinRT_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.WinRT_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.WinRT_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.WinRT_AdScale;
-				#elif UNITY_IOS
+#elif UNITY_IOS
 				refreshRate = desc.iOS_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.iOS_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.iOS_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.iOS_AdScale;
-				#elif UNITY_ANDROID
+#elif UNITY_ANDROID
 				refreshRate = desc.Android_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.Android_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.Android_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.Android_AdScale;
-				#elif UNITY_STANDALONE_WIN
+#elif UNITY_STANDALONE_WIN
 				refreshRate = desc.Win32_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.Win32_MillennialMediaAdvertising_APID;
 				userAgent = "";
-				gravity = desc.Win32_MillennialMediaAdvertising_AdGravity;
+				gravity = desc.Editor_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.Win32_AdScale;
-				#elif UNITY_STANDALONE_OSX
+#elif UNITY_STANDALONE_OSX
 				refreshRate = desc.OSX_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.OSX_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.OSX_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.OSX_AdScale;
-				#elif UNITY_STANDALONE_LINUX
+#elif UNITY_STANDALONE_LINUX
 				refreshRate = desc.Linux_MillennialMediaAdvertising_RefreshRate;
 				apid = desc.Linux_MillennialMediaAdvertising_APID;
 				userAgent = "";
 				gravity = desc.Linux_MillennialMediaAdvertising_AdGravity;
 				uiScale = desc.Linux_AdScale;
-				#endif
-				#endif
+#endif
+#endif
 
-				// make sure ad refresh rate doesn't go under 1 min
-				if (refreshRate < 60) refreshRate = 60;
+                // make sure ad refresh rate doesn't go under 1 min
+                if (refreshRate < 60) refreshRate = 60;
 
 				// create or get device ID
 				if (PlayerPrefs.HasKey("Reign_MMWebAds_DeviceID"))

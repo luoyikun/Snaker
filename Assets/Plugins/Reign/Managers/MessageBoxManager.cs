@@ -26,23 +26,23 @@ namespace Reign
 			#if !DISABLE_REIGN
 			#if UNITY_EDITOR
 			plugin = new MessageBoxPlugin();
-			#elif UNITY_WINRT
+#elif UNITY_WINRT
 			plugin = new MessageBoxPlugin_WinRT();
-			#elif UNITY_ANDROID
+#elif UNITY_ANDROID
 			plugin = new MessageBoxPlugin_Android();
-			#elif UNITY_IOS
+#elif UNITY_IOS
 			plugin = new MessageBoxPlugin_iOS();
-			#elif UNITY_BLACKBERRY
+#elif UNITY_BLACKBERRY
 			plugin = new MessageBoxPlugin_BB10();
-			#elif UNITY_STANDALONE_WIN
-			plugin = new MessageBoxPlugin_Win32();
-			#elif UNITY_STANDALONE_OSX
+#elif UNITY_STANDALONE_WIN
+			//plugin = new MessageBoxPlugin();
+#elif UNITY_STANDALONE_OSX
 			plugin = new MessageBoxPlugin_OSX();
-			#else
+#else
 			plugin = new MessageBoxPlugin_Dumy();
-			#endif
+#endif
 
-			ReignServices.AddService(update, null, null);
+            ReignServices.AddService(update, null, null);
 			#endif
 		}
 

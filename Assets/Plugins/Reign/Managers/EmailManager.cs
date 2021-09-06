@@ -22,31 +22,34 @@ namespace Reign
 			#if !DISABLE_REIGN
 			#if UNITY_EDITOR
 			plugin = new EmailPlugin();
-			#elif UNITY_WINRT
+#elif UNITY_WINRT
 			plugin = new EmailPlugin_WinRT();
-			#elif UNITY_ANDROID
+#elif UNITY_ANDROID
 			plugin = new EmailPlugin_Android();
-			#elif UNITY_IOS
+#elif UNITY_IOS
 			plugin = new EmailPlugin_iOS();
-			#elif UNITY_BLACKBERRY
+#elif UNITY_BLACKBERRY
 			plugin = new EmailPlugin_BB10();
-			#elif UNITY_STANDALONE_WIN
-			plugin = new EmailPlugin_Win32();
-			#else
+#elif UNITY_STANDALONE_WIN
+			//plugin = new EmailPlugin();
+#else
 			plugin = new EmailPlugin_Dumy();
-			#endif
-			#endif
-		}
+#endif
+#endif
+        }
 
-		/// <summary>
-		/// Use to open a native email request.
-		/// </summary>
-		/// <param name="to">The email the message is to.</param>
-		/// <param name="subject">The subject of the email.</param>
-		/// <param name="body">The body of the email.</param>
-		public static void Send(string to, string subject, string body)
+        /// <summary>
+        /// Use to open a native email request.
+        /// </summary>
+        /// <param name="to">The email the message is to.</param>
+        /// <param name="subject">The subject of the email.</param>
+        /// <param name="body">The body of the email.</param>
+        public static void Send(string to, string subject, string body)
 		{
-			plugin.Send(to, subject, body);
+            if (plugin != null)
+            {
+                plugin.Send(to, subject, body);
+            }
 		}
 	}
 

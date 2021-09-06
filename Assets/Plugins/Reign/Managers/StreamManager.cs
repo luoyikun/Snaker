@@ -70,21 +70,21 @@ namespace Reign
 			#if !DISABLE_REIGN
 			#if UNITY_EDITOR
 			plugin = new StreamPlugin();
-			#elif UNITY_WINRT
+#elif UNITY_WINRT
 			plugin = new StreamPlugin_WinRT();
-			#elif UNITY_ANDROID
+#elif UNITY_ANDROID
 			plugin = new StreamPlugin_Android();
-			#elif UNITY_IOS
+#elif UNITY_IOS
 			plugin = new StreamPlugin_iOS();
-			#elif UNITY_BLACKBERRY
+#elif UNITY_BLACKBERRY
 			plugin = new StreamPlugin_BB10();
-			#elif UNITY_STANDALONE_WIN
-			plugin = new StreamPlugin_Win32();
-			#else
+#elif UNITY_STANDALONE_WIN
+			//plugin = new StreamPlugin();
+#else
 			plugin = new StreamsPlugin_Dumy();
-			#endif
+#endif
 
-			ReignServices.AddService(update, null, null);
+            ReignServices.AddService(update, null, null);
 			#endif
 		}
 
