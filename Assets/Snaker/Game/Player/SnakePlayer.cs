@@ -191,6 +191,7 @@ namespace Snaker.Game.Player
             return false;
         }
 
+        //碰撞函数，就是两个圆相交
 		public bool HitTest(SnakePlayer player, float testDistance)
         {
             SnakeNode node = player.Head;
